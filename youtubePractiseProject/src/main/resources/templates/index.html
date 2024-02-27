@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+<h2>Student portal</h2>
+<a href="/student/new">Add a student</a>
+<br>
+
+
+<a href="/student/list">Student list</a><br>
+
+
+<form action="/student/update" method = "GET">
+Update Student with ID <input type="text" name="id" />
+<input type="submit" value="Search">
+</form>
+<br>
+
+<form action="/student/delete" method = "GET">
+    Delete Student with ID <input type="text" name="id" />
+    <input type="submit" value="Search">
+</form>
+
+</body>
+</html>

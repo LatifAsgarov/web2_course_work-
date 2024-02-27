@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a student</title>
+</head>
+<body>
+<form action="#" th:action = "@{/student/save}"  th:object = "${student}" method = "post">
+  Enter Student id: <input type = "text" th:field = "*{id}"/> <br>
+  Enter Student name: <input type = "text" th:field = "*{name}"/> <br>
+  Enter Student surname: <input type = "text" th:field = "*{surname}"/> <br>
+  <input type="submit" value="Save a student">
+</form>
+</body>
+</html>

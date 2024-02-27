@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List of Students</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Correct placement  of tr and td tags -->
+  <tr th:each="i : ${students}">
+    <td th:text="${i.id}">1</td>
+    <td th:text="${i.name}">Latif</td>
+    <td th:text="${i.surname}">Asgarov</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
