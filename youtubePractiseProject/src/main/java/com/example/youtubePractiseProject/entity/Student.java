@@ -1,14 +1,14 @@
 package com.example.youtubePractiseProject.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "STUDENT") // Explicitly specifying the table name, though not necessary if naming conventions are followed
 public class Student {
     @Id
+    @Column(name = "Student_ID")
     private Integer id;
 
     @Column(name = "Name")
@@ -16,7 +16,10 @@ public class Student {
 
     @Column(name = "Surname")
     private String surname;
-
+    @ManyToMany
+            @JoinTable(name = "Student_Course", joinColumns = @JoinColumn(name= "Student_ID" ),
+                    inverseJoinColumns = @JoinColumn(name = "Course_ID"))
+    List<Course> courses;
     public Student() {
         // Default constructor
     }
